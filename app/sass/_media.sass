@@ -1,0 +1,224 @@
+@import "vars"
+
+
+/*==========  Desktop First  ==========*/
++media-breakpoint-down(xxl)
+    .content__wrapper
+        padding-left: 0
+    .info-block
+        padding-left: 0
+    footer 
+        p
+            margin: 0
+    .main__heading 
+        h1
+            padding-left: 2.74vh
+    .benefits__item
+        max-width: 105px
+            
++media-breakpoint-down(xxl)
+    //vh by 768px height
+    .logo__wrapper 
+        .logo__heart
+            //max-width: 75px
+            max-width: 9.76vw
+            max-height: 7.25vh //manual set
+        .logo
+            //max-width: 150px
+            max-width: 19.53vh
+            max-height: 3.16vh //manual set
+        span
+            margin: 0 0 0 1.2vh //manual set
+            font-size: 2vh // manual set
+        .logo__friends
+            //max-width: 100px
+            margin-top: 5.6vh // manual set
+            max-height: 5.85vh // manual set
+        // .logo__wrapper 
+        //     span
+        //         padding-top: 0.5em
+        //     .logo__friends
+        //         padding-top: 2em
+    .form__wrapper
+        .form
+            //padding: 1.5em
+            padding: 3.125vh
+            // .btn-submit
+            //     width: 100%
+// .parfum
+//     margin-left: 0
+
+
++media-breakpoint-down(xl)
+    .parfum
+        max-height: 50vh
+    
+// ≥1200px
++media-breakpoint-down(lg)
+    header
+        padding: 1em 0
+    .logo__wrapper 
+        .logo__heart
+            max-width: 75px
+            max-height: 100%
+            height: auto
+        .logo
+           max-width: 150px
+           max-height: 100%
+           height: auto
+        span
+            margin: 0 0 0 1em
+            font-size: 1em
+        .logo__friends
+            max-width: 100px
+            max-height: 100%
+            height: auto
+    .main__heading 
+        h1
+            text-align: center
+            padding:  1em 0
+            font: normal normal 700 1.750em "HelveticaBold"
+    .form__header
+        margin-bottom: 1.285em
+        font: normal normal 700 1.750em "HelveticaBold"
+    .form__wrapper 
+        .form
+            margin: 2em auto
+            max-width: 83.333%
+            padding: 1.5em
+            .form-group
+                margin-bottom: 1.5em
+            .select-wrapper
+                z-index: 1
+                margin-bottom: 0.875em
+            select
+                max-height: 28px
+                font-size: 0.875em
+                line-height: 2em
+            input
+                font-size: 0.875em
+                line-height: 2em
+                &[type=text], &[type=tel], &[type=email] 
+                    max-height: 28px
+                &::placeholder
+                    font-size: 0.875em
+            label
+                font-size: 0.875em
+                margin-bottom: 0.714em
+                &[for=name],&[for=surname],&[for=second_name]
+                    font-size: 0.875em
+                &[for=phone],&[for=mail]
+                    margin-bottom: 0.4em
+                &[for=mail]
+                    margin-top: 1em
+                &[for=checkbox]
+                    font-size: 0.75em
+            .form__section
+                font-size: 0.875em
+            .birthday__section-head
+                 margin-bottom: 1em
+            .contacts__section-head
+                margin-bottom: 1.286em
+            .politics__section-head
+                margin-bottom: 0.786em
+            .btn-submit
+                width: 100%
+                margin-top: 2.286em
+                margin-bottom: 1em
+                height: 52px
+                font-size: 0.875em
+                
+    .info-block
+        padding-left: 15px
+    .bullets__wrapper
+        position: relative!important
+        margin: 1em auto 0 auto
+        width: 100%
+        left: 0
+        right: 0
+    .bullet
+        margin-bottom: 2em
+    .bullet__header
+        font-size: 1.5em
+    .bullet__descr
+        min-width: 100%
+        margin-bottom: 0.5em
+        font-size: 1.125em
+    .bullet__subdescr
+        font-size: 1em
+        .accent_price
+            font-size: 3.75em
+            .rub
+                font-size: 0.383em
+    .parfum
+        margin: 0 auto
+        height: auto
+        max-height: 100%
+    .benefits__wrapper
+        position: relative!important
+        left: 0
+        right: 0
+        width: 100%
+    .benefits-items__wrapper
+        padding: 1em 0 0 0
+    .benefits__header
+        font-size: 1.125em
+    .benefits__item
+        margin-bottom: 1em
+        p
+            font-size: 0.875em
+            margin-left: 0.714em
+        img
+            width: 22px
+            height: 22px
+
+    footer
+        p
+            font-size: .75em
+            margin: 2.5em auto
+            padding: 0
+            text-align: center
+    
+// ≥992px
++media-breakpoint-down(md)
+    .logo__wrapper
+        justify-content: space-between
+    .main__heading 
+        h1
+            padding-top: 0
+
+    .parfum
+        margin: 0 auto -8em auto
+// ≥768px
++media-breakpoint-down(sm)
+    .main__heading 
+        h1
+            margin-bottom: 0
+    .form__wrapper 
+        .form
+            margin-top: 0
+
+    .benefits__item
+        margin-left: auto
+        margin-right: auto
+        max-width: 150px
+// ≥576px
++media-breakpoint-down(xs)
+    .main__heading 
+        h1
+            margin-bottom: 1em
+    .logo__wrapper 
+        .logo__friends 
+            margin: none
+    .form__wrapper 
+        .form
+            max-width: 100%
+    .parfum 
+        margin: 0 auto -5em auto
+@media (max-width: 419.9px)
+    .logo__wrapper 
+        .logo__friends 
+            padding-top: 0
+            margin: 0 auto 1em auto
+    .parfum
+        margin: 0 auto -4em auto

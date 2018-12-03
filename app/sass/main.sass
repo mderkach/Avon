@@ -1,0 +1,409 @@
+@import "vars"
+@import "fonts"
+@import "libs"
+
+::placeholder
+	color: #666
+::selection
+	background-color: $accent
+	color: #fff
+::focus
+	box-shadow: none
+	outline: none
+
+a, button, .btn
+    &:focus
+        box-shadow: none
+        outline: none
+    
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.65
+	font-family: $default-font
+	overflow-x: hidden
+	color: $text
+	input, textarea
+		border: #666 1px solid
+		outline: none
+		// &:focus:required:invalid
+		// 	border-color: $accent
+		// &:required:valid
+		// 	border-color: $text
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+	&.img-width
+		width: 100%
+
+.text-center
+	text-align: center
+
+b, strong
+	font-weight: bold
+
+#fullpage
+	background: #e5e5e5 $gradient
+
+// header //
+header
+	width: 100%
+
+.logo__wrapper
+	font: normal normal 400 1.500em/1 "Helvetica"
+	font-size: 2.2vh
+	img
+		height: 100%
+	.logo__heart
+		max-height: 10.23vh
+	.logo
+		max-height: 4.16vh
+	span
+		//padding-top: 1em
+		padding-top: 2.2vh
+		//margin: 0 0 0 1em
+		margin: 0 0 0 2.2vh
+	.logo__friends
+		//margin-top: 3em
+		margin-top: 6.6vh
+		max-height: 6.85vh
+.main__heading
+	h1
+		//padding-left: 2.2em
+		padding-left: 5.74vh
+		//padding-top: 1em
+		padding-top: 2.6vh
+		margin-bottom: 0
+		font: normal normal 700 1.750em "HelveticaBold"
+		font-size: 2.6vh
+		text-transform: uppercase
+// /header //
+
+.content__wrapper 
+	//padding-left: 3.125em
+	padding-left: 4.6vh
+
+// form //
+.form__wrapper
+	margin-top: 1vh
+	
+.form-group
+	position: relative
+.form__header
+	//margin-bottom: 1.285em
+	margin-bottom: 3.3vh
+	font: normal normal 700 1.750em "HelveticaBold"
+	font-size: 2.59vh
+	text-transform: uppercase
+
+.form__wrapper
+	.form
+		height: 100%
+		max-width: 535px
+		width: 100%
+		background-color: #fff
+		//padding: 1.875em 3.750em 1.563em 3.750em
+		padding: 3.48vh 5.5vh 2.2vh 5.5vh
+		.form-group
+			//margin-bottom: 1.5em
+			margin-bottom: 2.2vh
+		.select-wrapper
+			z-index: 1
+			//margin-bottom: 0.875em
+			margin-bottom: 1.3vh
+			select
+				background: url('../img/arrow.png') no-repeat 90% 50%
+				padding-right: 30%
+				&::-ms-expand
+					display: none
+		select
+			//height: 28px!important
+			height: 100%
+			max-height: 2.6vh
+			padding-top: 0
+			padding-bottom: 0
+			appearance: none
+			border-radius: 0
+			border: 1px solid $text
+			font: normal normal 300 0.875em/2em "HelveticaLight"
+			font-size: 1.3vh
+		input
+			padding: 0 .75rem
+			border-radius: 0
+			border: 1px solid $text
+			font: normal normal 300 0.875em/1.5em "HelveticaLight"
+			font-size: 1.1vh
+			&::placeholder
+				color: #a8a8a8
+				position: relative
+				top: 7%
+			&[type=text], &[type=tel], &[type=email] 
+				height: 100%
+				//max-height: 28px
+				max-height: 2.6vh
+			&.not-valid
+					border-color: $accent
+			&.valid
+					border-color: #000
+		label
+			font: normal normal 300 0.875em "HelveticaLight"
+			font-size: 1.3vh
+			//margin-bottom: 0.714em
+			margin-bottom: 0.93vh
+			&[for=name],&[for=surname],&[for=second_name]
+				font: normal normal 700 0.875em "HelveticaBold"
+				font-size: 1.3vh
+			&[for=phone],&[for=mail]
+				//margin-bottom: 0.4em
+				margin-bottom: 0.5vh
+			&[for=mail]
+				//margin-top: 1em
+				margin-top: 1.3vh
+			&[for=checkbox]
+				font: normal normal 300 0.750em "HelveticaLight"
+				font-size: 1.1vh
+				a
+					color: $text
+					text-decoration: underline
+					&:hover
+						cursor: pointer
+		.form__section
+			font: normal normal 700 0.875em "HelveticaBold"
+			font-size: 1.3vh
+			margin-bottom: 0
+		.birthday__section-head
+			//margin-bottom: 1em
+			//margin-bottom: 1.48vh
+			margin-bottom: 0
+		.contacts__section-head
+			//margin-bottom: 1.286em
+			//margin-bottom: 1.85vh
+			margin-bottom: 0
+		.politics__section-head
+			//margin-bottom: 0.786em
+			margin-bottom: 1.16vh
+		.custom-checkbox 
+			.custom-control-input
+				&:checked ~ .custom-control-label
+					&:after
+						background: url('../img/heart.png') no-repeat 48% 50%
+						background-size: 5px
+				&:focus ~ .custom-control-label
+					&:before
+						box-shadow: none
+						outline: none
+			.custom-control-label
+				&::before
+					border-radius: 0
+					top: 0 
+					background-color: #fff
+					border: 1px solid #000
+				&:after
+					top: 0
+
+		.form-control, .custom-sontrol-label
+			&:focus
+				box-shadow: none
+				outline: none
+		.btn-submit
+			//margin-top: 2.286em
+			margin-top: 3.3vh
+			//margin-bottom: 1em
+			margin-bottom: 1.3vh
+			width: 267px
+			//height: 52px
+			height: 4.8vh
+			border: 1px solid $accent
+			background-color: transparent
+			font: normal normal 700 0.875em/1em "Arial"
+			font-size: 1.3vh
+			text-transform: uppercase
+			color: $accent
+			&:not(:disabled)
+				&:hover
+					color: #fff
+					background-color: $accent
+				cursor: pointer
+			&:disabled
+				color: #e5e5e5!important
+				border-color: #e5e5e5!important
+		.required
+			font: normal normal 300 0.625em "HelveticaLight"
+			margin-bottom: 0
+			margin-left: 5px
+
+.error-wrapper
+	display: none
+	right: 5px
+	bottom: 25px
+	left: auto
+	&.active
+		display: block
+.error
+	padding: 0.563em 0.750em 1.500em 0.438em
+	background-color: #ff326d
+	.error__descr
+		text-align: left
+		color: #fff
+		font: italic normal 400 0.625em/1 "HelveticaItalic"
+		max-width: 125px
+		margin-bottom: 0
+.arrow-down
+	position: absolute
+	right: 5px
+	width: 0
+	height: 0
+	border-left: 15px solid transparent
+	border-right: 15px solid transparent
+	border-top: 15px solid #ff326d
+
+// /form //
+
+.info-block
+	//padding-left: 3.125em
+	padding-left: 4.6vh
+
+// bullet //
+.bullets__wrapper
+	top: 0
+	left: 4.6vh
+	right: 1.38vh
+.bullet__header
+	color: $accent
+	margin-bottom: 0
+	font: normal normal 700 1.500em/1 "HelveticaBold"
+	font-size: 2.2vh
+	text-transform: uppercase
+.bullet
+	width: 100%
+.bullet__descr
+	margin-top: 0.3em
+	font: normal normal 700 1.125em/1 "HelveticaBold"
+	font-size: 1.6vh
+	margin-bottom: 0
+.hover__subdescr
+	text-decoration: underline
+	&:hover
+		text-decoration: none
+		color: $accent
+.bullet__subdescr
+	margin-top: 0.3em
+	margin-bottom: 0
+	color: $accent
+	font: normal normal 300 1em/1 "HelveticaLight"
+	font-size: 1.48vh
+	.default
+		color: $text
+		margin-bottom: 0
+	.accent_price
+		font: normal normal 700 3.750em/1 "HelveticaBold"
+		font-size: 5.5vh
+		.rub
+			//font-size: 0.383em
+			font-size: 2vh
+			font-family: "Rubl"
+			margin: 0 -10px
+// /bullet //
+
+.parfum
+	//margin-top: 8.750em
+	margin-top: 18.96vh
+	//margin-left: 3.125em
+	// margin-left: 4.6vh
+	margin-left: auto
+	margin-right: auto
+	height: 100%
+	max-height: 62.4vh
+
+// benefits //
+.benefits__wrapper
+	bottom: 0
+	left: 4.6vh
+	right: 1.38vh
+.benefits-items__wrapper
+	justify-content: space-between
+	border-top: 1px solid #171717
+	border-bottom: 1px solid #171717
+	//padding-top: 0.500em
+	padding-top: 0.74vh
+	//padding-bottom: 0.750em
+	padding-bottom: 1.1vh
+.benefits__header
+	font: normal normal 700 1.125em/1.625em "HelveticaBold"
+	font-size: 1.6vh
+	margin-bottom: 2.74vh
+	text-transform: uppercase
+.benefits__item
+	width: 100%
+	max-width: 128px
+	align-items: center
+	p
+		font: normal normal 700 0.875em/1 "HelveticaBold"
+		font-size: 1.3vh
+		margin-bottom: 0
+		width: 100%
+		max-width: 111px
+		//margin-left: 0.714em
+		margin-left: 0.93vh
+	img
+		//width: 22px
+		//height: 22px
+		width: 100%
+		height: 100%
+		max-width: 2.03vh
+		max-height: 2.03vh
+// /benefits //
+
+footer
+	p
+		font: normal normal 300 0.750em/1 "HelveticaLight"
+		font-size: 1.1vh
+		//margin: 0 0 0 9em
+		margin: 0 0 0 10vh
+		//padding-top: 2.333em
+		padding-top: 2.6vh
+		//padding-bottom: 3.333em
+		padding-bottom: 3.7vh
+
+// popup //
+.popup
+	overflow: visible
+	display: none
+	p
+		text-align: center
+		margin-bottom: 0
+		letter-spacing: 0.48px
+		font: italic normal 400 1em/1.125em "HelveticaItalic"
+	.btn-ok
+		border-radius: 0
+		color: #fff
+		width: 98px
+		height: 52px
+		border: 1px solid $accent
+		background-color: $accent
+		font: normal normal 400 0.875em/1em "Arial"
+		margin-top: 0.750em
+	.accepted-offer
+		font: normal normal 400 1em/1 "Helvetica"
+		.thankyou
+			font: normal normal 700 2.250em/1 "HelveticaBold"
+	.close-btn
+		width: 34px
+		height: 34px
+		background-color: $accent
+		color: #ffffff
+		border: none
+		border-radius: 50%
+		top: -20px
+		right: -20px
+		z-index: 8040
+		&:hover
+			cursor: pointer
+.fancybox-button.fancybox-button--close, .fancybox-button.fancybox-close-small
+	display: none
+// /popup //
+
+@import "media" // Always at the end
